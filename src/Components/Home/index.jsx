@@ -9,7 +9,7 @@ const Home = () => {
             origin: 'bottom',
             distance: '20px',
             duration: 1000,
-            reset: true
+            reset: false
         });
 
         sr.reveal(`.${styles.home_content} h4`, { delay: 200 });

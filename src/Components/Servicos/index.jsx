@@ -14,7 +14,7 @@ const Servicos = () => {
             origin: 'bottom',
             distance: '20px',
             duration: 1000,
-            reset: true // isso faz com que a animação se repita ao rolar a página
+            reset: false // isso faz com que a animação se repita ao rolar a página
         });
 
         sr.reveal(`.${styles.titulo1}`, { delay: 500 });
