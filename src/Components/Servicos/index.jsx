@@ -18,11 +18,11 @@ const Servicos = () => {
         });
 
         sr.reveal(`.${styles.titulo1}`, { delay: 500 });
-        sr.reveal(`.${styles.titulo2}`, { delay: 1000 });
-        sr.reveal(`.${styles.titulo3}`, { delay: 1500 });
-        sr.reveal(`.${styles.titulo4}`, { delay: 2000 });
-        sr.reveal(`.${styles.titulo5}`, { delay: 2500 });
-        sr.reveal(`.${styles.titulo6}`, { delay: 3000 });
+        sr.reveal(`.${styles.titulo2}`, { delay: 750 });
+        sr.reveal(`.${styles.titulo3}`, { delay: 1000 });
+        sr.reveal(`.${styles.titulo4}`, { delay: 1250 });
+        sr.reveal(`.${styles.titulo5}`, { delay: 1500 });
+        sr.reveal(`.${styles.titulo6}`, { delay: 1750 });
     }, []);
 
     return (
