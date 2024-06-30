@@ -37,11 +37,13 @@
 
 .foto {
   grid-area: foto;
+  margin-inline: 2rem;
 }
 
 .titulo {
   grid-area: titulo;
   color: var(--orange-color);
+  font-size: 0.625rem;
 }
 
 .descricao {
@@ -74,6 +76,8 @@
     grid-template-areas:
       "foto titulo"
       "foto descricao";
+      margin-block: 1.5rem;
+
   }
 }
 
@@ -81,6 +85,9 @@
 @media (max-width: 425px) {
   .servicos {
     padding: 1rem;
+    align-items: center;
+    text-align: center;
+    
   }
 
   .servicos .title_servicos {
@@ -95,5 +102,8 @@
       "foto"
       "titulo"
       "descricao";
+      margin-block: 2rem;
+
   }
+  
 }
