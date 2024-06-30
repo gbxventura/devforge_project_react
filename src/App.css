@@ -1,0 +1,35 @@
+.app{
+    max-width: 1100px;
+    width: 100%;
+}
+.app {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 0 1rem; /* Adiciona espaçamento nas laterais */
+  }
+  
+  /* Media Queries */
+  
+  /* Ajustes para telas menores que 1264px */
+  @media (max-width: 1264px) {
+    .app {
+      max-width: 100%;
+      padding: 0 2rem; /* Aumenta o espaçamento nas laterais */
+    }
+  }
+  
+  /* Ajustes para telas menores que 768px */
+  @media (max-width: 768px) {
+    .app {
+      padding: 0 1.5rem; /* Ajusta o espaçamento nas laterais */
+    }
+  }
+  
+  /* Ajustes para telas menores que 425px */
+  @media (max-width: 425px) {
+    .app {
+      padding: 0 1rem; /* Reduz o espaçamento nas laterais */
+    }
+  }
+  

@@ -5,11 +5,12 @@ import Servicos from "./Components/Servicos"
 
 function App() {
   return (
-    <>
+    <div className="app">
       <Header />
       <Home />
       <Servicos />
-    </>
+    </div>
+
   )
 }
 

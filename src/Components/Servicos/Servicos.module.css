@@ -1,40 +1,99 @@
 .servicos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2.5rem;
-    color: white;
-  }
-  .servicos .title_servicos {
-    padding-block: 2rem;
-    font-size: 2.5rem;
-  }
-  .titulo_Servicos {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-  }
-.container_servicos{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 2.1875rem 1.25rem;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "titulo1 titulo2 titulo3"
-    "titulo4 titulo5 titulo6"
-    ". . .";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  color: white;
 }
-.titulo1 {
+
+.servicos .title_servicos {
+  padding-block: 2rem;
+  font-size: 2.5rem;
+}
+
+.titulo_Servicos {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.container_servicos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.1875rem 1.25rem;
+}
+
+.titulo1, .titulo2, .titulo3, .titulo4, .titulo5, .titulo6 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "foto titulo titulo"
     "foto descricao descricao"
     "foto descricao descricao";
-  grid-area: titulo1;
+}
+
+.foto {
+  grid-area: foto;
+}
+
+.titulo {
+  grid-area: titulo;
+  color: var(--orange-color);
+}
+
+.descricao {
+  grid-area: descricao;
+}
+
+
+/* Ajustes para telas menores que 1024px */
+@media (max-width: 1024px) {
+  .container_servicos {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Ajustes para telas menores que 768px */
+@media (max-width: 768px) {
+  .servicos .title_servicos {
+    font-size: 2rem;
+  }
+
+  .container_servicos {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .titulo1, .titulo2, .titulo3, .titulo4, .titulo5, .titulo6 {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "foto titulo"
+      "foto descricao";
+  }
+}
+
+/* Ajustes para telas menores que 425px */
+@media (max-width: 425px) {
+  .servicos {
+    padding: 1rem;
+  }
+
+  .servicos .title_servicos {
+    font-size: 1.5rem;
+    padding-block: 1rem;
+  }
+
+  .titulo1, .titulo2, .titulo3, .titulo4, .titulo5, .titulo6 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "foto"
+      "titulo"
+      "descricao";
+  }
 }
