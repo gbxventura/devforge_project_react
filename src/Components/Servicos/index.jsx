@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
 import styles from './Servicos.module.css';
 import img1 from '../../assets/imgs/img-1.svg';
 import img2 from '../../assets/imgs/img-2.svg';
@@ -8,6 +9,22 @@ import img5 from '../../assets/imgs/img-5.svg';
 import img6 from '../../assets/imgs/img-6.svg';
 
 const Servicos = () => {
+    useEffect(() => {
+        const sr = ScrollReveal({
+            origin: 'bottom',
+            distance: '20px',
+            duration: 1000,
+            reset: true // isso faz com que a animação se repita ao rolar a página
+        });
+
+        sr.reveal(`.${styles.titulo1}`, { delay: 500 });
+        sr.reveal(`.${styles.titulo2}`, { delay: 1000 });
+        sr.reveal(`.${styles.titulo3}`, { delay: 1500 });
+        sr.reveal(`.${styles.titulo4}`, { delay: 2000 });
+        sr.reveal(`.${styles.titulo5}`, { delay: 2500 });
+        sr.reveal(`.${styles.titulo6}`, { delay: 3000 });
+    }, []);
+
     return (
         <div className={styles.servicos}>
             <h1 className={styles.title_servicos}>Serviços</h1>
