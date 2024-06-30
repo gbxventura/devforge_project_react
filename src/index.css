@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #2a2a2a;
+  --second-color: #626262;
+  --third-color: #464646;
+  --orange-color: #e65100;
+  --blue-color: #1f3a93;
+  --light-gray: #a9a9a9;
+  --white: #ededed;
+  --text-color: #fff;
+}
+body {
+  background-color: #000002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
