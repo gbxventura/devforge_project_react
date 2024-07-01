@@ -9,9 +9,9 @@ const Orcamento = () => {
                 <h4>Nossos Profissionais estão prontos para lhe atender</h4>
                 <p>Equipe especializada em Projetos Full Stack, Design e Marketing Multimidia</p>
                 <ul className={styles.list2}>
-                    <li><a href="#"> +55 11 9999-9999</a></li>
-                    <li><a href="#"> +55 11 9999-9999</a></li>
-                    <li><a href="#">contato@devforge.dev.br</a></li>
+                    <li>+55 11 9999-9999</li>
+                    <li> +55 11 9999-9999</li>
+                    <li>contato@devforge.dev.br</li>
                 </ul>
                 <div className={styles.contact_icons}>
                     <a href="#"><i className="bx bxl-facebook"></i></a>
