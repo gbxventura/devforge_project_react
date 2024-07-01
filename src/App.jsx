@@ -3,6 +3,7 @@ import Header from './Components/Header';
 import Home from './Components/Home';
 import Servicos from "./Components/Servicos"
 import Roadmap from './Components/Roadmap';
+import Portifolio from './Components/Portifolio';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Home />
       <Servicos />
       <Roadmap />
+      <Portifolio />
     </div>
 
   )
