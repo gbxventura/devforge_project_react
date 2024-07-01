@@ -4,6 +4,8 @@ import Home from './Components/Home';
 import Servicos from "./Components/Servicos"
 import Roadmap from './Components/Roadmap';
 import Portifolio from './Components/Portifolio';
+import Orcamento from './Components/Orcamento';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       <Servicos />
       <Roadmap />
       <Portifolio />
+      <Orcamento />
     </div>
 
   )
