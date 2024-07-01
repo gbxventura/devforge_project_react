@@ -17,16 +17,16 @@ const Servicos = () => {
             reset: false // isso faz com que a animação se repita ao rolar a página
         });
 
-        sr.reveal(`.${styles.titulo1}`, { delay: 500 });
-        sr.reveal(`.${styles.titulo2}`, { delay: 750 });
-        sr.reveal(`.${styles.titulo3}`, { delay: 1000 });
-        sr.reveal(`.${styles.titulo4}`, { delay: 1250 });
-        sr.reveal(`.${styles.titulo5}`, { delay: 1500 });
-        sr.reveal(`.${styles.titulo6}`, { delay: 1750 });
+        sr.reveal(`.${styles.titulo1}`, { delay: 950 });
+        sr.reveal(`.${styles.titulo2}`, { delay: 1200 });
+        sr.reveal(`.${styles.titulo3}`, { delay: 1450 });
+        sr.reveal(`.${styles.titulo4}`, { delay: 1700 });
+        sr.reveal(`.${styles.titulo5}`, { delay: 1950 });
+        sr.reveal(`.${styles.titulo6}`, { delay: 2200 });
     }, []);
 
     return (
-        <div className={styles.servicos}>
+        <div className={styles.servicos} id='servicos'>
             <h1 className={styles.title_servicos}>Serviços</h1>
             <div className={styles.container_servicos}>
                 <div className={styles.titulo1}>

@@ -12,9 +12,9 @@ const Home = () => {
             reset: false
         });
 
-        sr.reveal(`.${styles.home_content} h4`, { delay: 200 });
-        sr.reveal(`.${styles.home_content} h1`, { delay: 400 });
-        sr.reveal(`.${styles.home_content} p`, { delay: 600 });
+        sr.reveal(`.${styles.home_content} h4`, { delay: 500 });
+        sr.reveal(`.${styles.home_content} h1`, { delay: 600 });
+        sr.reveal(`.${styles.home_content} p`, { delay: 700 });
         sr.reveal(`.${styles.home_content} .${styles.btn_orcamento}`, { delay: 800 });
         sr.reveal(`.${styles.home} .img`, { delay: 1000 });
     }, []);

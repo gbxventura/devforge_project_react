@@ -5,6 +5,8 @@ import Servicos from "./Components/Servicos"
 import Roadmap from './Components/Roadmap';
 import Portifolio from './Components/Portifolio';
 import Orcamento from './Components/Orcamento';
+import Footer from './Components/Footer';
+
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
       <Roadmap />
       <Portifolio />
       <Orcamento />
+      <Footer />
     </div>
 
   )
