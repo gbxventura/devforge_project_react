@@ -1,27 +1,6 @@
-import './App.css'
-import Header from './Components/Header';
-import Home from './Components/Home';
-import Servicos from "./Components/Servicos"
-import Roadmap from './Components/Roadmap';
-import Portifolio from './Components/Portifolio';
-import Orcamento from './Components/Orcamento';
-import Footer from './Components/Footer';
+import React from "react";
+import AppRoutes from "./Routes";
 
-
-
-function App() {
-  return (
-    <div className="app">
-      <Header />
-      <Home />
-      <Servicos />
-      <Roadmap />
-      <Portifolio />
-      <Orcamento />
-      <Footer />
-    </div>
-
-  )
+export default function App() {
+    return <AppRoutes />;
 }
-
-export default App
