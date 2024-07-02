@@ -31,7 +31,7 @@ const Home = () => {
           digitais para empresas, focada em projetar, desenvolver e gerenciar
           soluções profissionais para a web.
         </p>
-        <a href='#orcamento' className={styles.btn_orcamento}>
+        <a href='#contact' className={styles.btn_orcamento}>
           Quero um orçamento
         </a>
       </div>
