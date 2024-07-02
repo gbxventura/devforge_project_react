@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './Portifolio.module.css';
-import portfolio1 from '../../assets/imgs/portfolio1.jpg';
-import portfolio2 from '../../assets/imgs/portfolio2.jpg';
-import portfolio3 from '../../assets/imgs/portfolio3.jpg';
-import portfolio4 from '../../assets/imgs/portfolio4.jpg';
-import portfolio5 from '../../assets/imgs/portfolio5.jpg';
-import portfolio6 from '../../assets/imgs/portfolio6.jpg';
+import portfolio1 from '../../assets/imgs/portifolio8.png';
+import portfolio2 from '../../assets/imgs/portifolio12.png.png';
+import portfolio3 from '../../assets/imgs/protifolio7.jpg';
+import portfolio4 from '../../assets/imgs/protifolio9.jpg.jpg';
+import portfolio5 from '../../assets/imgs/protifolio10.jpg';
+import portfolio6 from '../../assets/imgs/protifolio11.jpg';
 
 const Portfolio = () => {
     const portfolioItems = [
