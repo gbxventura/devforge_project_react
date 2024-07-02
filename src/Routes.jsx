@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePg from './Pages/HomePg';
-import Login from './Pages/Login';
-import Pg404 from './Pages/Pg404';
+import HomePg from './Pages/HomPage/HomePg';
+import Login from './Pages/Login/Login';
+import Pg404 from './Pages/Pg404/Pg404';
 
 export default function AppRoutes() {
   return (
