@@ -10,7 +10,7 @@ app.use(cors());
 
 // Conectar ao MongoDB
 mongoose.connect(
-  'mongodb+srv://root:<password>@cluster0.zkwilos.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+  'mongodb+srv://root:root@cluster0.zkwilos.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
