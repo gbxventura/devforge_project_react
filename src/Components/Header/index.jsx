@@ -39,7 +39,9 @@ function Header() {
           <a href='#contact'>Orçamento</a>
         </li>
         <li>
-          <button onClick={btnLogin}>Login</button>
+          <button onClick={btnLogin} className={styles.btn_login}>
+            Login
+          </button>
         </li>
       </ul>
     </div>

@@ -1,71 +1,64 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './Login.module.css';
+import styles from './Register.module.css';
 
-const Login = () => {
-  const [email, setEmail] = useState('');
+const Register = () => {
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-  const handleLogin = async e => {
+
+  const handleRegister = async e => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/login', {
+      const response = await fetch('/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username: email, password }), // Corrigido para 'username'
+        body: JSON.stringify({ username, password }),
       });
-      const data = await response.json();
       if (response.status === 200) {
-        localStorage.setItem('token', data.token);
-        navigate('/');
+        alert('Usuário registrado com sucesso!');
+        navigate('/login');
       } else {
-        alert('Login falhou!');
+        const data = await response.text();
+        alert(`Falha ao registrar: ${data}`);
       }
     } catch (error) {
-      console.error('Login error:', error);
+      console.error('Erro de registro:', error);
+      alert('Erro ao tentar registrar');
     }
   };
 
   return (
     <div className={styles.formulario}>
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
+      <h2>Cadastrar Usuário</h2>
+      <form onSubmit={handleRegister}>
         <div className={styles.adm}>
-          <label htmlFor='email'>E-mail</label>
+          <label htmlFor='username'>Nome de Usuário:</label>
           <input
-            id='email'
-            type='email'
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            placeholder='exemplo@gmail.com'
-            autoComplete='email'
+            id='username'
+            type='text'
+            value={username}
+            onChange={e => setUsername(e.target.value)}
+            placeholder='Nome de usuário'
             required
             className={styles.inputField}
           />
         </div>
         <div className={styles.adm}>
-          <label htmlFor='password'>Senha</label>
+          <label htmlFor='password'>Senha:</label>
           <input
             id='password'
             type='password'
             value={password}
             onChange={e => setPassword(e.target.value)}
-            placeholder='Digite sua senha aqui.'
-            autoComplete='current-password'
+            placeholder='Senha'
             required
             className={styles.inputField}
           />
         </div>
         <div className={styles.btn}>
           <button type='submit' className={styles.buttonLogin}>
-            Entre
-          </button>
-          <button
-            type='button'
-            onClick={() => navigate('/Registrar')}
-            className={styles.buttonLogin}
-          >
-            Se registre
+            Registrar
           </button>
           <button
             type='button'
@@ -80,4 +73,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

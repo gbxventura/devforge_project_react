@@ -58,7 +58,7 @@
   font-size: 16px;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  margin: 1rem auto;
+  margin: 40px auto;
   background-color: var(--orange-color);
   border: none;
   width: 100%;

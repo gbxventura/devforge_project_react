@@ -135,7 +135,7 @@ ul li:hover a:after {
   }
 
   .navlist.showMenu {
-    height: 200px; /* Ajuste a altura conforme necessário */
+    height: auto;
   }
 
   .menuIcon {
@@ -143,6 +143,11 @@ ul li:hover a:after {
   }
   .navlist {
     color: var(--white);
+  }
+  .btn_login {
+    color: var(--white);
+    font-size: 3em;
+    background-color: transparent;
   }
 }
 
@@ -165,7 +170,7 @@ ul li:hover a:after {
   }
 
   .navlist.showMenu {
-    height: 200px; /* Ajuste a altura conforme necessário */
+    height: auto;
   }
 
   .menuIcon {
@@ -173,5 +178,10 @@ ul li:hover a:after {
   }
   .navlist {
     color: var(--white);
+  }
+  .btn_login {
+    color: var(--white);
+    font-size: 3em;
+    background-color: transparent;
   }
 }
