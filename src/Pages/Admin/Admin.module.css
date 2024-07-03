@@ -1,0 +1,9 @@
+.mainAdmin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.h1Admin {
+  color: white;
+  font-size: 10em;
+}

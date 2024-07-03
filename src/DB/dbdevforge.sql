@@ -1,3 +1,4 @@
+-- MUDAR SENHA PARA ROOT *SENAC*
 DROP dbdevforge;
 CREATE DATABASE dbdevforge;
 USE dbdevforge;

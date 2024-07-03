@@ -12,12 +12,12 @@ const Login = () => {
       const response = await fetch('/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username: email, password }), // Corrigido para 'username'
+        body: JSON.stringify({ username: email, password }),
       });
       const data = await response.json();
       if (response.status === 200) {
         localStorage.setItem('token', data.token);
-        navigate('/');
+        navigate('/Admin');
       } else {
         alert('Login falhou!');
       }
