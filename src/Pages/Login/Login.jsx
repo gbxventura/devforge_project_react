@@ -12,7 +12,7 @@ const Login = () => {
       const response = await fetch('/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username: email, password }),
+        body: JSON.stringify({ username: email, password }), // Corrigido para 'username'
       });
       const data = await response.json();
       if (response.status === 200) {
@@ -63,9 +63,9 @@ const Login = () => {
           <button
             type='button'
             onClick={() => navigate('/Registrar')}
-            className={styles.buttonLogin}
+            className={styles.buttonHome}
           >
-            Se registre
+            Se Registre
           </button>
           <button
             type='button'
