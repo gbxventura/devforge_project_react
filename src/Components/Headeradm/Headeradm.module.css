@@ -1,0 +1,100 @@
+.headerAdm {
+    display: flex; 
+    width: 100vw;
+    height: 8.125rem;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    background-color: #f5f7fd;
+    width: 100%;
+    height: 55px;
+    border-radius: 30px;
+    position: relative;
+    padding: 0 10px; 
+    
+}
+
+.search .lupa {
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+ i {
+    font-size: 19px;
+}
+
+.search .input {
+    flex-grow: 1; 
+    height: 100%;
+    background-color: #f5f7fd;
+    overflow: hidden;
+    border-radius: 30px;
+    
+}
+
+.search .input input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+    text-align: center;
+    background-color: #f5f7fd;
+    padding-right: 11px;
+}
+
+.right{
+    display: flex;
+    padding-right: 25px;
+}
+
+ .right .notification,
+.right .chat,
+.right .admperfil {
+    margin-left: 25px; 
+    cursor: pointer;
+} 
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: orangered;
+    min-width: 158px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.dropdown a {
+    display: block;
+    padding: 8px 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: aqua;
+    color: #fff;
+}
+
+.admperfil {
+    position: relative;
+    padding-right: 200px;
+}
+
+.admperfil:hover .dropdown {
+    display: block;
+}
+
+.admperfil:hover .menu {
+    background-color: transparent;
+}
