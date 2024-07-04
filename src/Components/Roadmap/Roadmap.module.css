@@ -12,6 +12,7 @@
 }
 .h1_roadmap {
   text-align: center;
+  font-weight: bold;
   color: var(--white);
 }
 .h1_roadmap span {
