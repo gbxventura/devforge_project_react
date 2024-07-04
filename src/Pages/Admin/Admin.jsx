@@ -1,9 +1,9 @@
-import styles from './Admin.module.css';
+import Headeradm from "../../Components/Headeradm";
 
 const Admin = () => {
   return (
-    <div className={styles.mainAdmin}>
-      <h1 className={styles.h1Admin}>Pagina admin</h1>
+    <div className="Admpage">
+      <Headeradm />
     </div>
   );
 };
