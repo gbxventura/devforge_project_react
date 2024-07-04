@@ -6,7 +6,14 @@ import cors from 'cors';
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: 'http://localhost:5173', // URL do seu frontend
+    credentials: true,
+  })
+);
+
+app.use(express.urlencoded({ extended: true }));
 
 const db = mysql.createConnection({
   host: 'localhost',
@@ -52,6 +59,23 @@ app.post('/login', async (req, res) => {
       res.status(401).send('Credenciais inválidas');
     }
   });
+});
+
+app.post('/orcamento', (req, res) => {
+  const { name, company, email, cargo, phone, mkt, message } = req.body;
+  const sql =
+    'INSERT INTO orcamentos (name, company, email, cargo, phone, mkt, message) VALUES (?, ?, ?, ?, ?, ?, ?)';
+  db.query(
+    sql,
+    [name, company, email, cargo, phone, mkt, message],
+    (err, result) => {
+      if (err) {
+        console.error('Erro na consulta: ', err);
+        return res.status(500).send('Erro ao registrar o orçamento.');
+      }
+      res.send('Orçamento registrado com sucesso.');
+    }
+  );
 });
 
 app.listen(5000, () => console.log('Server rodando na porta 5000'));

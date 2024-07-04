@@ -1,6 +1,8 @@
 import styles from './Pg404.module.css';
 import img404 from '../../assets/imgs/pg404.jpg';
 import { useNavigate } from 'react-router-dom';
+import Header from '../../Components/Header/index';
+import Footer from '../../Components/Footer/index';
 
 const Pg404 = () => {
   let navigate = useNavigate();
@@ -9,7 +11,8 @@ const Pg404 = () => {
   };
   return (
     <section className={styles.pg404}>
-      <img src={img404} style={{ marginTop: '20rem' }} alt='erro 404 img' />
+      <Header />
+      <img src={img404} style={{ marginTop: '20%' }} alt='erro 404 img' />
       <h1 style={{ color: 'red', fontSize: 65, textAlign: 'center' }}>
         ERRO 404
       </h1>
@@ -28,6 +31,7 @@ const Pg404 = () => {
           Voltar para o INICIO
         </button>
       </p>
+      <Footer />
     </section>
   );
 };

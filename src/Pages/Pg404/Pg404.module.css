@@ -1,3 +1,11 @@
-body {
-  background-color: red;
+@media (max-width: 425px) {
+  .pg404 {
+    padding: 2rem;
+  }
+  .pg404 img {
+    width: 100%;
+  }
+  .pg404 h1 {
+    font-size: 10em;
+  }
 }
