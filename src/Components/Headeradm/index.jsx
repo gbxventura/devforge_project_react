@@ -1,15 +1,7 @@
-import { useRef } from 'react'
 import styles from './Headeradm.module.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const Headeradm = () => {
-
-    // const inputRef = useRef(null);
-    // const handleSearchClick = () => {
-    //     if (inputRef.current) {
-    //         inputRef.current.focus();
-    //     }
-    // };
 
     return (
         <header className={styles.headerAdm}> 
@@ -31,7 +23,7 @@ const Headeradm = () => {
                 <div className={styles.admperfil}>
                     <div className={styles.menun}><i class="bi bi-person"></i></div>
                     <div className={styles.dropdown}>
-                        <a href="">Nome</a>
+                        <a href=""><i class="bi bi-person-fill-gear">Nome</i></a>
                         <a href="#"><i class="bi bi-key-fill">Mudar a senha</i></a>
                         <a href="#"><i class="bi bi-door-open">Sair</i></a>
                     </div>

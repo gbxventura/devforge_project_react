@@ -28,7 +28,11 @@
     cursor: pointer;
 }
 
- i {
+i {
+    font-size: 30px;
+}
+
+.lupa i{
     font-size: 19px;
 }
 
@@ -54,7 +58,6 @@
 
 .right{
     display: flex;
-    padding-right: 25px;
 }
 
  .right .notification,
@@ -69,16 +72,24 @@
     position: absolute;
     background-color: orangered;
     min-width: 158px;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 0;
     z-index: 1;
+    width: 215px;
+    height: 155px;
+    border-radius: 15px;
+    align-items: center;
 }
 
-.dropdown a {
+.dropdown a i {
     display: block;
     padding: 8px 16px;
     color: white;
     text-decoration: none;
+    font-size: 17px;
+    width: 215px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
 }
 
 .dropdown a:hover {
