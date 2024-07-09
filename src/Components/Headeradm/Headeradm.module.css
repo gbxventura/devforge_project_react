@@ -16,7 +16,7 @@
     border-radius: 30px;
     position: relative;
     padding: 0 10px; 
-    
+    margin-left: 5rem;
 }
 
 .search .lupa {
@@ -60,7 +60,7 @@ i {
     display: flex;
 }
 
- .right .notification,
+.right .notification,
 .right .chat,
 .right .admperfil {
     margin-left: 25px; 
@@ -70,7 +70,7 @@ i {
 .dropdown {
     display: none;
     position: absolute;
-    background-color: orangered;
+    background-color: var(--third-color);
     min-width: 158px;
     right: 0;
     z-index: 1;
@@ -78,6 +78,7 @@ i {
     height: 155px;
     border-radius: 15px;
     align-items: center;
+    
 }
 
 .dropdown a i {
