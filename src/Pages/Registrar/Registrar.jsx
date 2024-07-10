@@ -10,12 +10,12 @@ const Register = () => {
   const handleRegister = async e => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/register', {
+      const response = await fetch('http://localhost:5000/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
       });
-      if (response.status === 200) {
+      if (response.status === 201) {
         alert('Usuário registrado com sucesso!');
         navigate('/login');
       } else {
@@ -24,7 +24,9 @@ const Register = () => {
       }
     } catch (error) {
       console.error('Erro de registro:', error);
-      alert('Erro ao tentar registrar');
+      alert(
+        'Erro ao tentar registrar, verifique sua conexão ou se o servidor está online'
+      );
     }
   };
 

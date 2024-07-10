@@ -1,3 +1,4 @@
+// Login.jsx
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Login.module.css';
@@ -6,23 +7,30 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+
   const handleLogin = async e => {
     e.preventDefault();
+    const apiURL = import.meta.env.VITE_API_URL || 'http://localhost:5000'; // Use a variável de ambiente ou default
+
     try {
-      const response = await fetch('/api/login', {
+      const response = await fetch(`${apiURL}/api/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username: email, password }),
       });
-      const data = await response.json();
-      if (response.status === 200) {
+      if (response.ok) {
+        const data = await response.json();
         localStorage.setItem('token', data.token);
         navigate('/Admin');
       } else {
-        alert('Login falhou!');
+        const errorData = await response.json(); // Processa como JSON
+        alert(`Login falhou! ${errorData.message}`);
       }
     } catch (error) {
-      console.error('Login error:', error);
+      console.error('Erro de login:', error);
+      alert(
+        'Erro ao tentar conectar ao servidor. Por favor, tente mais tarde.'
+      );
     }
   };
 
