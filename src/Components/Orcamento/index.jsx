@@ -42,6 +42,7 @@ const Orcamento = () => {
           email: '',
           cargo: '',
           phone: '',
+          numFunc: '',
           mkt: '',
           message: '',
         });
