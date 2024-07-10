@@ -5,8 +5,12 @@ const authRoutes = require('./routes/auth');
 require('dotenv').config();
 
 const app = express();
+const corsOptions = {
+  origin: 'https://devforge-project-react.vercel.app',
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 
-app.use(cors()); // Isso permite todas as origens
 app.use(express.json());
 app.use('/api', authRoutes);
 
