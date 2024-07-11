@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import card1 from '../../assets/imgs/portifolio8.png';
 import card2 from '../../assets/imgs/protifolio11.jpg';
@@ -12,7 +12,24 @@ function CenterMode() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
+
   return (
     <div className={styles.slider_container}>
       <div className={styles.titulo_roadmap} id='roadmap'>
@@ -22,28 +39,28 @@ function CenterMode() {
       </div>
       <Slider {...settings}>
         <div>
-          <h3>1</h3>
-          <img src={card1} alt='' />
+          <h3>Título</h3>
+          <img src={card1} alt='Card 1' />
         </div>
         <div>
-          <h3>2</h3>
-          <img src={card2} alt='' />
+          <h3>Título</h3>
+          <img src={card2} alt='Card 2' />
         </div>
         <div>
-          <h3>3</h3>
-          <img src={card3} alt='' />
+          <h3>Título</h3>
+          <img src={card3} alt='Card 3' />
         </div>
         <div>
-          <h3>4</h3>
-          <img src={card1} alt='' />
+          <h3>Título</h3>
+          <img src={card1} alt='Card 1' />
         </div>
         <div>
-          <h3>5</h3>
-          <img src={card2} alt='' />
+          <h3>Título</h3>
+          <img src={card2} alt='Card 2' />
         </div>
         <div>
-          <h3>6</h3>
-          <img src={card3} alt='' />
+          <h3>Título</h3>
+          <img src={card3} alt='Card 3' />
         </div>
       </Slider>
     </div>
