@@ -39,19 +39,15 @@ function CenterMode() {
       </div>
       <Slider {...settings}>
         <div>
-          <h3>Título</h3>
           <img src={card1} alt='Card 1' />
         </div>
         <div>
-          <h3>Título</h3>
           <img src={card2} alt='Card 2' />
         </div>
         <div>
-          <h3>Título</h3>
           <img src={card3} alt='Card 3' />
         </div>
         <div>
-          <h3>Título</h3>
           <img src={card4} alt='Card 1' />
         </div>
       </Slider>
