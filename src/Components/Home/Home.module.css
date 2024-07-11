@@ -24,6 +24,7 @@
   color: var(--white);
   padding-block: 1rem;
   width: 39rem;
+  text-align: left;
 }
 
 .home_content h4 {
