@@ -1,64 +1,7 @@
-import { useState } from 'react';
 import styles from './Orcamento.module.css';
 import { toast } from 'react-toastify';
 
 const Orcamento = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    company: '',
-    email: '',
-    cargo: '',
-    phone: '',
-    mkt: '',
-    message: '',
-  });
-
-  const handleChange = e => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async e => {
-    e.preventDefault();
-    try {
-      const response = await fetch('http://localhost:5000/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        toast.success('Formulário enviado com sucesso.', {
-          className: styles.toast,
-        });
-        // Limpar o formulário após o envio
-        setFormData({
-          name: '',
-          company: '',
-          email: '',
-          cargo: '',
-          phone: '',
-          numFunc: '',
-          mkt: '',
-          message: '',
-        });
-      } else {
-        toast.error('Erro ao enviar o formulário.', {
-          className: styles.toast,
-        });
-      }
-    } catch (error) {
-      toast.error('Erro ao enviar o formulário: ' + error.message, {
-        className: styles.toast,
-      });
-      console.error('Erro ao enviar o formulário:', error);
-    }
-  };
-
   return (
     <section className={styles.contact} id='contact'>
       <div className={styles.contact_text}>
@@ -85,53 +28,48 @@ const Orcamento = () => {
         </div>
       </div>
       <div className={styles.contact_form}>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit=''>
           <input
             type='text'
             name='name'
             placeholder='Digite seu Nome'
-            value={formData.name}
-            onChange={handleChange}
+            value=''
+            onChange=''
             required
           />
           <input
             type='text'
             name='company'
             placeholder='Nome da Empresa'
-            value={formData.company}
-            onChange={handleChange}
+            value=''
+            onChange=''
             required
           />
           <input
             type='email'
             name='email'
             placeholder='Digite seu E-mail'
-            value={formData.email}
-            onChange={handleChange}
+            value=''
+            onChange=''
             required
           />
           <input
             type='text'
             name='cargo'
             placeholder='Digite seu Cargo'
-            value={formData.cargo}
-            onChange={handleChange}
+            value=''
+            onChange=''
             required
           />
           <input
             type='text'
             name='phone'
             placeholder='Digite a Quantidade de Funcionários'
-            value={formData.phone}
-            onChange={handleChange}
+            value=''
+            onChange=''
             required
           />
-          <select
-            name='mkt'
-            value={formData.mkt}
-            onChange={handleChange}
-            required
-          >
+          <select name='mkt' value='' onChange='' required>
             <option value=''>Quem faz o mkt digital para sua empresa?</option>
             <option value='interno'>Equipe Interna</option>
             <option value='externo'>Agência Externa</option>
@@ -141,8 +79,8 @@ const Orcamento = () => {
             cols='35'
             rows='10'
             placeholder='Como podemos ajudar'
-            value={formData.message}
-            onChange={handleChange}
+            value=''
+            onChange=''
             required
           ></textarea>
           <input type='submit' value='Enviar' className={styles.submit} />
