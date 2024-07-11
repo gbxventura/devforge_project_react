@@ -14,6 +14,7 @@
   display: flex;
   flex-direction: column;
   padding-right: 5rem;
+
   width: 45rem;
 }
 
@@ -152,5 +153,11 @@
   .home img {
     width: 100%;
     border-radius: 2rem;
+  }
+}
+
+@media (min-width: 1265px) {
+  .home_content {
+    padding-left: 5rem;
   }
 }

@@ -23,7 +23,7 @@ const Login = () => {
         localStorage.setItem('token', data.token);
         navigate('/Admin');
       } else {
-        const errorData = await response.json(); // Processa como JSON
+        const errorData = await response.json();
         alert(`Login falhou! ${errorData.message}`);
       }
     } catch (error) {

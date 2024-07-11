@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Portifolio.module.css';
 import portfolio1 from '../../assets/imgs/portifolio8.png';
 import portfolio2 from '../../assets/imgs/portifolio12.png.png';
