@@ -1,5 +1,5 @@
 .portfolio {
-  padding: 10rem 15% 7.5rem;
+  padding: 5rem 7.5rem;
   border-bottom: 0.3125rem solid var(--orange-color);
 }
 
@@ -21,9 +21,9 @@
 
 .portfolioContent {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(370px, auto));
   align-items: center;
-  gap: 2.5rem;
+  gap: 3.5rem;
   margin-top: 5rem;
 }
 
@@ -36,6 +36,7 @@
 
 .row img {
   width: 100%;
+  height: 250px;
   border-radius: 0.5rem;
   display: block;
   transition: transform 0.5s;

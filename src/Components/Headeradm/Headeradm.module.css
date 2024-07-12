@@ -1,85 +1,88 @@
 .headerAdm {
-    display: flex; 
-    width: 100%;
-    height: 8.125rem;
-    background-color: #000002;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  width: 100%;
+  height: 8.125rem;
+  background-color: #000002;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .search {
-    display: flex;
-    align-items: center;
-    background-color: #f5f7fd;
-    width: 100%;
-    height: 55px;
-    border-radius: 30px;
-    position: relative;
-    padding: 0 10px; 
-    margin-left: 5rem;
+  display: flex;
+  align-items: center;
+  background-color: #f5f7fd;
+  width: 100%;
+  height: 55px;
+  border-radius: 30px;
+  position: relative;
+  padding: 0 10px;
+  margin-left: 5rem;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+.linkVoltar {
+  color: var(--white);
 }
 
 .search .lupa {
-    width: 50px; 
-    height: 50px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 i {
-    font-size: 30px;
-    color: #fff;
+  font-size: 30px;
+  color: #fff;
 }
 
-.lupa i{
-    font-size: 19px;
-    color: #000002;
+.lupa i {
+  font-size: 19px;
+  color: #000002;
 }
 
 .search .input {
-    flex-grow: 1; 
-    height: 100%;
-    background-color: #f5f7fd;
-    overflow: hidden;
-    border-radius: 30px;
-    
+  flex-grow: 1;
+  height: 100%;
+  background-color: #f5f7fd;
+  overflow: hidden;
+  border-radius: 30px;
 }
 
 .search .input input {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    outline: none;
-    font-size: 15px;
-    text-align: center;
-    background-color: #f5f7fd;
-    padding-right: 11px;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: none;
+  font-size: 15px;
+  text-align: center;
+  background-color: #f5f7fd;
+  padding-right: 11px;
 }
 
-.right{
-    display: flex;
+.right {
+  display: flex;
 }
 
 .right .notification,
 .right .chat,
 .right .admperfil {
-    margin-left: 25px; 
-    cursor: pointer;
-} 
-
-
+  margin-left: 25px;
+  cursor: pointer;
+}
 
 .admperfil {
-    position: relative;
-    padding-right: 200px;
+  position: relative;
+  padding-right: 200px;
 }
 
 .admperfil:hover .dropdown {
-    display: block;
+  display: block;
 }
 
 .admperfil:hover .menu {
-    background-color: transparent;
+  background-color: transparent;
 }

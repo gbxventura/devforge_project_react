@@ -9,20 +9,33 @@
   padding: 5rem;
   width: auto;
 }
+.formList li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  line-height: 1.7;
+}
 .formList ul {
-  border: 1px solid white;
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   text-align: left;
   width: auto;
+  border-radius: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .formList strong {
-  color: red;
+  color: var(--orange-color);
   margin-right: 1rem;
 }
 .formList h2 {
   margin-bottom: 3rem;
 }
 .formList hr {
-  border: 2px solid white;
+  border: 2px solid var(--white);
   margin-block: 1rem;
+}
+.formList h4 {
+  text-align: center;
+  background-color: #111;
+  border: 1px solid var(--orange-color);
 }

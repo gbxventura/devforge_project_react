@@ -18,6 +18,9 @@ const FormList = () => {
         <ul>
           {forms.map(form => (
             <li key={form._id}>
+              <h4>
+                Id Forms: <strong>{form._id}</strong>
+              </h4>
               <p>
                 <strong>Nome:</strong> {form.name}
               </p>

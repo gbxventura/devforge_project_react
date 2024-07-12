@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Login.module.css';
-import pgRegistrar from '../Registrar/Registrar';
 
 const Login = () => {
   const [email, setEmail] = useState('');
