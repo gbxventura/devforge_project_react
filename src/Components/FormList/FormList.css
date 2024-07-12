@@ -1,0 +1,28 @@
+.formList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 1rem;
+  padding: 5rem;
+  width: auto;
+}
+.formList ul {
+  border: 1px solid white;
+  padding: 2rem 1rem;
+  text-align: left;
+  width: auto;
+}
+.formList strong {
+  color: red;
+  margin-right: 1rem;
+}
+.formList h2 {
+  margin-bottom: 3rem;
+}
+.formList hr {
+  border: 2px solid white;
+  margin-block: 1rem;
+}
