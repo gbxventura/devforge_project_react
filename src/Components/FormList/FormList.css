@@ -38,4 +38,5 @@
   text-align: center;
   background-color: #111;
   border: 1px solid var(--orange-color);
+  margin-block: 2rem;
 }

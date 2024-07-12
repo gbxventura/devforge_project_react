@@ -19,7 +19,7 @@ const FormList = () => {
           {forms.map(form => (
             <li key={form._id}>
               <h4>
-                Id Forms: <strong>{form._id}</strong>
+                pedido: <strong>{form._id}</strong>
               </h4>
               <p>
                 <strong>Nome:</strong> {form.name}
@@ -42,7 +42,7 @@ const FormList = () => {
               <p>
                 <strong>Mensagem:</strong> {form.message}
               </p>
-              <hr />
+              {/* <hr /> */}
             </li>
           ))}
         </ul>
