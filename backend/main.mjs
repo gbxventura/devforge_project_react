@@ -2,9 +2,12 @@ import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 const app = express();
 const port = 3000;
+const SECRET_KEY = 'seu_segredo_super_secreto';
 
 // Middleware
 app.use(bodyParser.json());
@@ -14,9 +17,18 @@ app.use(cors());
 const mongoURI =
   'mongodb+srv://gbxventura:0901@cursojs01.e6vqfep.mongodb.net/forms?retryWrites=true&w=majority&appName=cursojs01';
 mongoose
-  .connect(mongoURI)
-  .then(() => console.log('Conectado ao MongoDB'))
-  .catch(err => console.log(err));
+  .connect(mongoURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 5000,
+    socketTimeoutMS: 45000,
+  })
+  .then(() => {
+    console.log('Conectado ao MongoDB');
+  })
+  .catch(err => {
+    console.error('Erro ao conectar ao MongoDB', err);
+  });
 
 // Definir o modelo de dados
 const FormSchema = new mongoose.Schema({
@@ -30,6 +42,54 @@ const FormSchema = new mongoose.Schema({
 });
 
 const FormModel = mongoose.model('Form', FormSchema);
+
+// Definir o modelo de usuário
+const UserSchema = new mongoose.Schema({
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+});
+
+const UserModel = mongoose.model('User', UserSchema);
+
+// Rota para registro de usuário
+app.post('/api/register', async (req, res) => {
+  try {
+    const hashedPassword = await bcrypt.hash(req.body.password, 10);
+    const user = new UserModel({
+      email: req.body.email,
+      password: hashedPassword,
+    });
+    await user.save();
+    res.status(201).send('Usuário registrado com sucesso');
+  } catch (err) {
+    res.status(500).send('Erro ao registrar o usuário');
+  }
+});
+
+// Rota para login de usuário
+app.post('/api/login', async (req, res) => {
+  try {
+    const user = await UserModel.findOne({ email: req.body.email });
+    if (!user) {
+      return res.status(400).send('Email ou senha inválidos');
+    }
+
+    const isPasswordValid = await bcrypt.compare(
+      req.body.password,
+      user.password
+    );
+    if (!isPasswordValid) {
+      return res.status(400).send('Email ou senha inválidos');
+    }
+
+    const token = jwt.sign({ id: user._id, email: user.email }, SECRET_KEY, {
+      expiresIn: '1h',
+    });
+    res.status(200).json({ token });
+  } catch (err) {
+    res.status(500).send('Erro ao fazer login');
+  }
+});
 
 // Rota para receber os dados do formulário
 app.post('/api/form', async (req, res) => {
