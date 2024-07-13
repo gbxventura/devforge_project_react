@@ -25,7 +25,7 @@ const Headeradm = () => {
         <div className={styles.admperfil}>
           <div className={styles.menun}>
             <Link className={styles.linkVoltar} to={'/'}>
-              Voltar
+              <p>Voltar</p>
             </Link>
           </div>
           <div className={styles.dropdown}></div>

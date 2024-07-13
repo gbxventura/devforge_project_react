@@ -5,6 +5,7 @@
   background-color: #000002;
   align-items: center;
   justify-content: space-between;
+  color: var(--white);
 }
 
 .search {
@@ -24,7 +25,6 @@ input:focus::placeholder {
 .linkVoltar {
   color: var(--white);
 }
-
 .search .lupa {
   width: 50px;
   height: 50px;
@@ -85,4 +85,14 @@ i {
 
 .admperfil:hover .menu {
   background-color: transparent;
+}
+
+@media (max-width: 800px) {
+  .linkVoltar {
+    padding-left: 2rem;
+    display: block;
+  }
+  .linkVoltar p {
+    padding: 2rem;
+  }
 }

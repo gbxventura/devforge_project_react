@@ -40,3 +40,12 @@
   border: 1px solid var(--orange-color);
   margin-block: 2rem;
 }
+
+@media (max-width: 1024px) {
+  .formList ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: 2rem;
+  }
+}

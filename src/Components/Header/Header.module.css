@@ -1,6 +1,11 @@
 .btn_login {
   background-color: transparent;
-  color: white;
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 1.5625rem;
+  transition: all 0.45s ease;
+  position: relative;
 }
 .header {
   position: fixed;
@@ -127,7 +132,7 @@ ul li:hover a:after {
   .navlist {
     display: block;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 10, 0.681);
     position: absolute;
     top: 100%;
     left: 0;
@@ -159,7 +164,7 @@ ul li:hover a:after {
   .navlist {
     display: block;
     flex-direction: column;
-    background: rgba(0, 0, 10, 0.9);
+    background: rgba(0, 0, 10, 0.681);
     position: absolute;
     top: 100%;
     left: 0;
