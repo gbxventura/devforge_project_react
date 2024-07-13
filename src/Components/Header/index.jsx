@@ -1,17 +1,30 @@
-import { useState } from 'react';
+// src/Components/Header/index.jsx
+import { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import AuthContext from '../../context/AuthContext';
 import styles from './Header.module.css';
 import { FaBars } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  let navigate = useNavigate();
-  const btnLogin = () => {
-    navigate('/Login');
+
+  const handleLogin = () => {
+    navigate('/login');
+  };
+
+  const handleAdminNavigation = () => {
+    navigate('/admin');
+  };
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
   };
 
   return (
@@ -38,11 +51,29 @@ function Header() {
         <li>
           <a href='#contact'>Orçamento</a>
         </li>
-        <li>
-          <button onClick={btnLogin} className={styles.btn_login}>
-            Login
-          </button>
-        </li>
+        {user ? (
+          <>
+            <li>
+              <button
+                onClick={handleAdminNavigation}
+                className={styles.btn_login}
+              >
+                Admin
+              </button>
+            </li>
+            <li>
+              <button onClick={handleLogout} className={styles.btn_login}>
+                Logout
+              </button>
+            </li>
+          </>
+        ) : (
+          <li>
+            <button onClick={handleLogin} className={styles.btn_login}>
+              Login
+            </button>
+          </li>
+        )}
       </ul>
     </div>
   );

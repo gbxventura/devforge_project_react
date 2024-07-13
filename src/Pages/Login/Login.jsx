@@ -1,31 +1,20 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import AuthContext from '../../context/AuthContext';
 import styles from './Login.module.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
 
   const handleSubmit = async e => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3000/api/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        localStorage.setItem('token', data.token);
-        navigate('/admin');
-      } else {
-        alert('Email ou senha inválidos');
-      }
+      await login(email, password);
+      navigate('/admin');
     } catch (error) {
       alert('Erro ao fazer login');
     }
