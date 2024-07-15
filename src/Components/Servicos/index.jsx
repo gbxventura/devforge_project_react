@@ -45,10 +45,10 @@ const Servicos = () => {
             <img src={img2} alt='Foto2' />
           </div>
           <div className={styles.titulo}>
-            <h1>Criação de Sites</h1>
+            <h1>Otimização</h1>
           </div>
           <div className={styles.descricao}>
-            <p>Fazemos a criação de sites profissionais para a sua empresa.</p>
+            <p>Iremos otimizar o site da sua empresa para os mecanusmos do Google.</p>
           </div>
         </div>
         <div className={styles.titulo3}>
@@ -56,10 +56,10 @@ const Servicos = () => {
             <img src={img3} alt='Foto3' />
           </div>
           <div className={styles.titulo}>
-            <h1>Criação de Sites</h1>
+            <h1>Marketing Digital</h1>
           </div>
           <div className={styles.descricao}>
-            <p>Fazemos a criação de sites profissionais para a sua empresa.</p>
+            <p>Trabalhamos com campanhas para o Google, Facebook e Instagram.</p>
           </div>
         </div>
         <div className={styles.titulo4}>
@@ -67,10 +67,10 @@ const Servicos = () => {
             <img src={img4} alt='Foto4' />
           </div>
           <div className={styles.titulo}>
-            <h1>Criação de Sites</h1>
+            <h1>Identidade Visial</h1>
           </div>
           <div className={styles.descricao}>
-            <p>Fazemos a criação de sites profissionais para a sua empresa.</p>
+            <p>Nossa equipe irá criar a identidade visual para a sua empresa.</p>
           </div>
         </div>
         <div className={styles.titulo5}>
@@ -78,10 +78,10 @@ const Servicos = () => {
             <img src={img5} alt='Foto5' />
           </div>
           <div className={styles.titulo}>
-            <h1>Criação de Sites</h1>
+            <h1>Sistemas Web & Integração de Softwares de Terceiros</h1>
           </div>
           <div className={styles.descricao}>
-            <p>Fazemos a criação de sites profissionais para a sua empresa.</p>
+            <p>Desenvolvimento de projetos sob medida. Integrações entre sistemas. Infraestruturas de servidor e suporte especializado.</p>
           </div>
         </div>
         <div className={styles.titulo6}>
@@ -89,10 +89,10 @@ const Servicos = () => {
             <img src={img6} alt='Foto6' />
           </div>
           <div className={styles.titulo}>
-            <h1>Criação de Sites</h1>
+            <h1>Treinamento de uso do site</h1>
           </div>
           <div className={styles.descricao}>
-            <p>Fazemos a criação de sites profissionais para a sua empresa.</p>
+            <p>Às vezes pode ser complexo gereciar o próprio site. Após finalizado a contrução de seu site. Vamos ajudá-lo a explorar e personalizar seu novo painel de administração.</p>
           </div>
         </div>
       </div>

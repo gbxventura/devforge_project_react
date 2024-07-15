@@ -6,7 +6,6 @@ import HomePg from './Pages/HomPage/HomePg';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Registrar/Registrar';
 import Admin from './Pages/Admin/Admin';
-import Cliente from './Pages/Cliente/Cliente';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Pg404 from './Pages/Pg404/Pg404';
 
@@ -23,14 +22,6 @@ function AppRoutes() {
             element={
               <PrivateRoute>
                 <Admin />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path='/cliente'
-            element={
-              <PrivateRoute>
-                <Cliente />
               </PrivateRoute>
             }
           />

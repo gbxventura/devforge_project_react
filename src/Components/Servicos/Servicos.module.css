@@ -23,10 +23,22 @@
   gap: 2.1875rem 1.25rem;
 }
 
-.titulo1, .titulo2, .titulo3, .titulo4, .titulo5, .titulo6 {
+.titulo1, .titulo3, .titulo5, .titulo6 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "foto titulo titulo"
+    "foto descricao descricao"
+    "foto descricao descricao";
+}
+
+.titulo2, .titulo4, .titulo6{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: .1fr .1fr .1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import AuthContext from '../../context/AuthContext';
 import styles from './Header.module.css';
 import { FaBars } from 'react-icons/fa';
+import logo from '../../../public/logo.png';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +31,8 @@ function Header() {
   return (
     <div className={`${styles.header} ${styles.sticky}`}>
       <a className={`${styles.logo} ${styles.devLogo}`} href='#'>
-        <span>Dev</span>Forge
+        {/* <span>Dev</span>Forge */}
+        <img src={logo} alt="logo" className={styles.logoImg} />
       </a>
       <FaBars className={styles.menuIcon} onClick={toggleMenu} />
       <ul className={`${styles.navlist} ${isMenuOpen ? styles.showMenu : ''}`}>
@@ -46,7 +48,7 @@ function Header() {
           <a href='#roadmap'>Road Map</a>
         </li>
         <li>
-          <a href='#portfolio'>Portifólio</a>
+          <a href='#portfolio'>Portfólio</a>
         </li>
         <li>
           <a href='#contact'>Orçamento</a>

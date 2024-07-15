@@ -10,40 +10,40 @@ const Portfolio = () => {
   const portfolioItems = [
     {
       img: portfolio6,
-      title: 'Projeto Web',
-      description: 'Lorem, ipsum dolor sit amet consectetur',
+      title: 'Escola de Devs',
+      description: 'Um projeto feito para ensinar jovens a serem futuros progamadores.',
     },
     {
       img: portfolio5,
-      title: 'Projeto Web',
-      description: 'Lorem, ipsum dolor sit amet consectetur',
+      title: 'Consultoria Movi',
+      description: 'Projeto feito para consultoria para experiências exclusivas',
     },
     {
       img: portfolio1,
-      title: 'Projeto Web',
-      description: 'Lorem, ipsum dolor sit amet consectetur',
+      title: 'WebDevelopers',
+      description: 'Projeto de um curso sobre web-developement',
     },
     {
       img: portfolio2,
-      title: 'Projeto Web',
-      description: 'Lorem, ipsum dolor sit amet consectetur',
+      title: 'Layer',
+      description: 'Projeto para hospedagem de banco de dados',
     },
     {
       img: portfolio3,
-      title: 'Projeto Web',
-      description: 'Lorem, ipsum dolor sit amet consectetur',
+      title: 'Coder',
+      description: 'Projeto para teste de codigos',
     },
     {
       img: portfolio4,
-      title: 'Projeto Web',
-      description: 'Lorem, ipsum dolor sit amet consectetur',
+      title: 'Grifalt',
+      description: 'Projeto de design e organizações de empresas',
     },
   ];
 
   return (
     <section className={styles.portfolio} id='portfolio'>
       <div className={styles.mainText}>
-        <p>Portifólio</p>
+        <p>Portfólio</p>
         <h2>
           Ultimos <span>Projetos</span>
         </h2>

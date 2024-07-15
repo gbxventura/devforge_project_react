@@ -108,7 +108,7 @@ const Orcamento = () => {
           <input
             type='text'
             name='phone'
-            placeholder='Digite a Quantidade de Funcionários'
+            placeholder='Digite seu telefone'
             value={formData.phone}
             onChange={handleChange}
             required
