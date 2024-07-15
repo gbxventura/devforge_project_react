@@ -4,7 +4,7 @@
   height: 8.125rem;
   background-color: #000002;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   color: var(--white);
 }
 
@@ -24,6 +24,8 @@ input:focus::placeholder {
 }
 .linkVoltar {
   color: var(--white);
+  display: block;
+  margin-inline: 5rem;
 }
 .search .lupa {
   width: 50px;

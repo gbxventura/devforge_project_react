@@ -112,6 +112,19 @@ app.get('/api/forms', async (req, res) => {
   }
 });
 
+// Rota para excluir um formulário
+app.delete('/api/forms/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    await FormModel.findByIdAndDelete(id);
+    res.status(200).send('Formulário excluído com sucesso');
+  } catch (err) {
+    console.error('Erro ao excluir o formulário:', err);
+    res.status(500).send('Erro ao excluir o formulário');
+  }
+});
+
+
 // Ouvindo porta
 app.listen(port, () => {
   console.log(`Server executando na porta ${port}`);

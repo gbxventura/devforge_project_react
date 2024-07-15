@@ -40,6 +40,11 @@
   border: 1px solid var(--orange-color);
   margin-block: 2rem;
 }
+.formList button{
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
 
 @media (max-width: 1024px) {
   .formList ul {

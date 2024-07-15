@@ -11,6 +11,22 @@ const FormList = () => {
       .catch(error => console.error('Erro ao buscar os dados:', error));
   }, []);
 
+  const handleDelete = (id) => {
+    console.log(`Tentando excluir formulário com ID: ${id}`);
+    fetch(`http://localhost:3000/api/forms/${id}`, {
+      method: 'DELETE',
+    })
+      .then(response => {
+        if (response.ok) {
+          console.log(`Formulário com ID: ${id} excluído com sucesso`);
+          setForms(forms.filter(form => form._id !== id));
+        } else {
+          console.error('Erro ao excluir o formulário');
+        }
+      })
+      .catch(error => console.error('Erro ao excluir o formulário:', error));
+  };
+
   return (
     <div className='formList'>
       <h2>Formulários Recebidos</h2>
@@ -19,8 +35,12 @@ const FormList = () => {
           {forms.map(form => (
             <li key={form._id}>
               <h4>
-                pedido: <strong>{form._id}</strong>
+                Pedido: <strong>{form._id}</strong>
+                <button onClick={() => handleDelete(form._id)}>
+                🗑️
+              </button>
               </h4>
+              
               <p>
                 <strong>Nome:</strong> {form.name}
               </p>
@@ -42,6 +62,7 @@ const FormList = () => {
               <p>
                 <strong>Mensagem:</strong> {form.message}
               </p>
+
               {/* <hr /> */}
             </li>
           ))}
