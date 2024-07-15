@@ -2,6 +2,7 @@ import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../../context/AuthContext';
 import styles from './Login.module.css';
+import { toast } from 'react-toastify';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -16,7 +17,7 @@ const Login = () => {
       await login(email, password);
       navigate('/admin');
     } catch (error) {
-      alert('Erro ao fazer login');
+      toast.error('Erro ao fazer login');
     }
   };
 

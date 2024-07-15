@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Register.module.css';
+import { toast } from 'react-toastify';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -20,13 +21,13 @@ const Register = () => {
       });
 
       if (response.ok) {
-        alert('Usuário registrado com sucesso');
+        toast.success('Usuário registrado com sucesso');
         navigate('/login'); // Redireciona para a página de login após o registro
       } else {
-        alert('Erro ao registrar usuário');
+        toast.error('Usuário já existente');
       }
     } catch (error) {
-      alert('Erro ao registrar usuário');
+      toast.error('Erro no servidor');
     }
   };
 
