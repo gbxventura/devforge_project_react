@@ -31,8 +31,8 @@ function Header() {
   return (
     <div className={`${styles.header} ${styles.sticky}`}>
       <a className={`${styles.logo} ${styles.devLogo}`} href='#'>
-        {/* <span>Dev</span>Forge */}
         <img src={logo} alt="logo" className={styles.logoImg} />
+        <p><span>Dev</span>Forge</p>
       </a>
       <FaBars className={styles.menuIcon} onClick={toggleMenu} />
       <ul className={`${styles.navlist} ${isMenuOpen ? styles.showMenu : ''}`}>
