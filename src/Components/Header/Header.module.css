@@ -123,7 +123,16 @@ ul li:hover a:after {
   padding: 0.0625rem 15%;
 }
 
+
+
+
 /* Responsividade */
+@media(max-width: 1440px){
+  .navlist a{
+    font-size: 1.0225em;
+  }
+}
+
 @media (max-width: 425px) {
   .navlist {
     display: block;
@@ -169,9 +178,6 @@ ul li:hover a:after {
     height: 0;
     overflow: hidden;
     transition: height 0.3s ease;
-  }
-  .navlist li {
-    margin-bottom: 0.5rem;
   }
 
   .navlist.showMenu {

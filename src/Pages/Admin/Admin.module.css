@@ -7,3 +7,14 @@
   padding: 1rem;
   box-sizing: border-box;
 }
+
+@media (max-width: 425px){
+  .admPage{
+    padding: 0;
+  }
+}
+@media (max-width: 768px){
+  .admPage{
+    padding: 0;
+  }
+}

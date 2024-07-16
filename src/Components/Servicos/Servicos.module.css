@@ -70,16 +70,43 @@
 }
 
 /* Ajudeste para telas de 1440px */
+@media(max-width:1440px){
+  .servicos .title_servicos {
+    font-size: 2rem;
+  }
 
+  .container_servicos {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .titulo1,
+  .titulo2,
+  .titulo3,
+  .titulo4,
+  .titulo5,
+  .titulo6 {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      'foto titulo'
+      'foto descricao';
+    margin-block: 1.5rem;
+  }
+}
 /* Ajustes para telas menores que 1024px */
 @media (max-width: 1024px) {
   .container_servicos {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: none;
     gap: 1.5rem;
   }
 }
 
+
+
 /* Ajustes para telas menores que 768px */
+
+
 @media (max-width: 768px) {
   .servicos .title_servicos {
     font-size: 2rem;
@@ -133,3 +160,4 @@
     margin-block: 2rem;
   }
 }
+
