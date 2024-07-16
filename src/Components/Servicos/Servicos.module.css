@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 15rem;
+  margin-bottom: 5rem;
   color: white;
 }
 
@@ -21,31 +21,36 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2.1875rem 1.25rem;
-  width: 100rem;
+  /* width: 100rem; */
 }
 
-.titulo1, .titulo3, .titulo5, .titulo6 {
+.titulo1,
+.titulo3,
+.titulo5,
+.titulo6 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "foto titulo titulo"
-    "foto descricao descricao"
-    "foto descricao descricao";
+    'foto titulo titulo'
+    'foto descricao descricao'
+    'foto descricao descricao';
 }
 
-.titulo2, .titulo4, .titulo6{
+.titulo2,
+.titulo4,
+.titulo6 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: .1fr .1fr .1fr;
+  grid-template-rows: 0.1fr 0.1fr 0.1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "foto titulo titulo"
-    "foto descricao descricao"
-    "foto descricao descricao";
+    'foto titulo titulo'
+    'foto descricao descricao'
+    'foto descricao descricao';
 }
 
 .foto {
@@ -61,9 +66,8 @@
 
 .descricao {
   grid-area: descricao;
-  
+  width: 20rem;
 }
-
 
 /* Ajustes para telas menores que 1024px */
 @media (max-width: 1024px) {
@@ -84,14 +88,18 @@
     gap: 1rem;
   }
 
-  .titulo1, .titulo2, .titulo3, .titulo4, .titulo5, .titulo6 {
+  .titulo1,
+  .titulo2,
+  .titulo3,
+  .titulo4,
+  .titulo5,
+  .titulo6 {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto auto;
     grid-template-areas:
-      "foto titulo"
-      "foto descricao";
-      margin-block: 1.5rem;
-
+      'foto titulo'
+      'foto descricao';
+    margin-block: 1.5rem;
   }
 }
 
@@ -101,7 +109,6 @@
     padding: 1rem;
     align-items: center;
     text-align: center;
-    
   }
 
   .servicos .title_servicos {
@@ -109,15 +116,18 @@
     padding-block: 1rem;
   }
 
-  .titulo1, .titulo2, .titulo3, .titulo4, .titulo5, .titulo6 {
+  .titulo1,
+  .titulo2,
+  .titulo3,
+  .titulo4,
+  .titulo5,
+  .titulo6 {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
-      "foto"
-      "titulo"
-      "descricao";
-      margin-block: 2rem;
-
+      'foto'
+      'titulo'
+      'descricao';
+    margin-block: 2rem;
   }
-  
 }
