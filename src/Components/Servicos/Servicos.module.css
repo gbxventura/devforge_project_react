@@ -4,7 +4,9 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 5rem;
+  padding-top: 10rem;
   color: white;
+
 }
 
 .servicos .title_servicos {
@@ -98,7 +100,8 @@
 @media (max-width: 1024px) {
   .container_servicos {
     grid-template-columns: none;
-    gap: 1.5rem;
+    grid-template-columns: fr 2fr;
+
   }
 }
 

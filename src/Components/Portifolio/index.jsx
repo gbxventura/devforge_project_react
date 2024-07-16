@@ -41,7 +41,9 @@ const Portfolio = () => {
   ];
 
   return (
-    <section className={styles.portfolio} id='portfolio'>
+    <>
+    <div className='divisoria' id='portfolio'></div>
+    <section className={styles.portfolio} >
       <div className={styles.mainText}>
         <p>Portfólio</p>
         <h2>
@@ -63,6 +65,7 @@ const Portfolio = () => {
         ))}
       </div>
     </section>
+    </>
   );
 };
 

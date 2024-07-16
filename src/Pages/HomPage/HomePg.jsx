@@ -6,6 +6,7 @@ import Roadmap from '../../Components/Roadmap';
 import Portifolio from '../../Components/Portifolio';
 import Orcamento from '../../Components/Orcamento';
 import Footer from '../../Components/Footer';
+import "./HomPage.css"
 
 const HomePg = () => {
   return (

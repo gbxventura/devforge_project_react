@@ -32,7 +32,8 @@ function CenterMode() {
 
   return (
     <div className={styles.slider_container}>
-      <div className={styles.titulo_roadmap} id='roadmap'>
+      <div className="divisoria" id="roadmap">abc</div>
+      <div className={styles.titulo_roadmap} id=''>
         <h1 className={styles.h1_roadmap}>
           Road<span>Map</span>
         </h1>

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 import styles from './Home.module.css';
-import img_home from '../../assets/imgs/home-img.png';
+import img_home from '../../../public/homeImg.jpg';
 
 const Home = () => {
   useEffect(() => {

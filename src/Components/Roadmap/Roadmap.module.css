@@ -4,6 +4,7 @@
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
+
 }
 
 .slider_container img {
@@ -12,6 +13,8 @@
   border-radius: 2rem;
   margin-block: 1rem;
 }
+
+
 
 .h1_roadmap {
   text-align: center;
