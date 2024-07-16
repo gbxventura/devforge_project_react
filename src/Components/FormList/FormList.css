@@ -6,51 +6,87 @@
   text-align: center;
   color: var(--white);
   margin-bottom: 1rem;
-  padding: 5rem;
-  width: auto;
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
 }
+
+.formList ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: left;
+  width: 100%;
+  overflow-wrap: break-word;
+  border-radius: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 25px 50px -12px,
+    rgba(0, 0, 0, 0.3) 0px 15px 30px -15px;
+  background-color: #333;
+  box-sizing: border-box;
+}
+
 .formList li {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  line-height: 1.7;
+  line-height: 1.5;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #222;
+  border-radius: 0.5rem;
 }
-.formList ul {
-  padding: 2rem 2rem;
-  text-align: left;
-  width: auto;
-  border-radius: 2rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
+
 .formList strong {
   color: var(--orange-color);
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
+
 .formList h2 {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  color: var(--orange-color);
 }
-.formList hr {
-  border: 2px solid var(--white);
-  margin-block: 1rem;
-}
+
 .formList h4 {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #111;
   border: 1px solid var(--orange-color);
-  margin-block: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
-.formList button{
+
+.formList button {
   background-color: transparent;
   border: none;
   font-size: 20px;
+  cursor: pointer;
+  color: var(--orange-color);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+  .formList {
+    padding: 1rem;
+  }
+
   .formList ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-inline: 2rem;
+    padding: 1rem;
+  }
+
+  .formList h2 {
+    font-size: 1.5rem;
+  }
+
+  .formList h4 {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .formList li {
+    padding: 0.5rem;
   }
 }

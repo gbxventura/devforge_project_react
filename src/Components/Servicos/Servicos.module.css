@@ -69,6 +69,8 @@
   width: 20rem;
 }
 
+/* Ajudeste para telas de 1440px */
+
 /* Ajustes para telas menores que 1024px */
 @media (max-width: 1024px) {
   .container_servicos {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './FormList.css';
 
-const FormList = () => {
+const FormList = ({ searchTerm }) => {
   const [forms, setForms] = useState([]);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const FormList = () => {
       .catch(error => console.error('Erro ao buscar os dados:', error));
   }, []);
 
-  const handleDelete = (id) => {
+  const handleDelete = id => {
     console.log(`Tentando excluir formulário com ID: ${id}`);
     fetch(`http://localhost:3000/api/forms/${id}`, {
       method: 'DELETE',
@@ -27,20 +27,22 @@ const FormList = () => {
       .catch(error => console.error('Erro ao excluir o formulário:', error));
   };
 
+  // Filtrar formulários com base no termo de pesquisa
+  const filteredForms = forms.filter(form =>
+    form.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className='formList'>
       <h2>Formulários Recebidos</h2>
-      {forms.length > 0 ? (
+      {filteredForms.length > 0 ? (
         <ul>
-          {forms.map(form => (
+          {filteredForms.map(form => (
             <li key={form._id}>
               <h4>
                 Pedido: <strong>{form._id}</strong>
-                <button onClick={() => handleDelete(form._id)}>
-                🗑️
-              </button>
+                <button onClick={() => handleDelete(form._id)}>🗑️</button>
               </h4>
-              
               <p>
                 <strong>Nome:</strong> {form.name}
               </p>
@@ -62,8 +64,6 @@ const FormList = () => {
               <p>
                 <strong>Mensagem:</strong> {form.message}
               </p>
-
-              {/* <hr /> */}
             </li>
           ))}
         </ul>

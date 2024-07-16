@@ -4,7 +4,9 @@
   height: 8.125rem;
   background-color: #000002;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 2rem;
+  box-sizing: border-box;
   color: var(--white);
 }
 
@@ -13,20 +15,23 @@
   align-items: center;
   background-color: #f5f7fd;
   width: 100%;
+  max-width: 500px;
   height: 55px;
   border-radius: 30px;
   position: relative;
   padding: 0 10px;
-  margin-left: 5rem;
 }
+
 input:focus::placeholder {
   color: transparent;
 }
+
 .linkVoltar {
   color: var(--white);
   display: block;
-  margin-inline: 5rem;
+  margin-left: 2rem;
 }
+
 .search .lupa {
   width: 50px;
   height: 50px;
@@ -60,41 +65,44 @@ i {
   border: 0;
   outline: none;
   font-size: 15px;
-  text-align: center;
   background-color: #f5f7fd;
-  padding-right: 11px;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .right {
   display: flex;
+  align-items: center;
 }
 
 .right .notification,
 .right .chat,
 .right .admperfil {
-  margin-left: 25px;
+  margin-left: 1rem;
   cursor: pointer;
 }
 
 .admperfil {
   position: relative;
-  padding-right: 200px;
 }
 
-.admperfil:hover .dropdown {
-  display: block;
-}
-
-.admperfil:hover .menu {
-  background-color: transparent;
-}
-
-@media (max-width: 800px) {
-  .linkVoltar {
-    padding-left: 2rem;
-    display: block;
+@media (max-width: 768px) {
+  .headerAdm {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
   }
-  .linkVoltar p {
-    padding: 2rem;
+
+  .search {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .linkVoltar {
+    margin: 0;
+  }
+
+  .right {
+    margin-top: 1rem;
   }
 }

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styles from './Headeradm.module.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-const Headeradm = () => {
+const Headeradm = ({ setSearchTerm }) => {
   return (
     <header className={styles.headerAdm}>
       <form action=''>
@@ -15,7 +15,8 @@ const Headeradm = () => {
               type='text'
               name='ipt-adm'
               id='inpt-adm'
-              placeholder='Pequise o projeto.'
+              placeholder='Pesquise o formulario'
+              onChange={e => setSearchTerm(e.target.value)}
             />
           </div>
         </div>
