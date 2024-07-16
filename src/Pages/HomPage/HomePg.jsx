@@ -18,6 +18,10 @@ const HomePg = () => {
       <Portifolio />
       <Orcamento />
       <Footer />
+      <a href="#" class="whats-link">
+      <i class="bx bxl-whatsapp" id="icon"></i>
+    </a>
+
     </div>
   );
 };

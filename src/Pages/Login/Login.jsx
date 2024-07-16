@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import AuthContext from '../../context/AuthContext';
 import styles from './Login.module.css';
 import { toast } from 'react-toastify';
+import logo from '../../../public/logo.png';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -23,6 +24,9 @@ const Login = () => {
 
   return (
     <div className={styles.formulario}>
+      <div className={styles.logoImg}>
+        <img src={logo} alt="" />
+      </div>
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div className={styles.adm}>

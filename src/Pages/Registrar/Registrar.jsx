@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Register.module.css';
 import { toast } from 'react-toastify';
+import logo from '../../../public/logo.png';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -33,6 +34,9 @@ const Register = () => {
 
   return (
     <div className={styles.formulario}>
+      <div className={styles.logoImg}>
+        <img src={logo} alt="" />
+      </div>
       <h2>Cadastrar Usuário</h2>
       <form onSubmit={handleSubmit}>
         <div className={styles.adm}>

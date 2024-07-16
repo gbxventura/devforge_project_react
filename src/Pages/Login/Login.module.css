@@ -12,6 +12,17 @@
   border-radius: 10px;
 }
 
+.logoImg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.logoImg img{
+  width: 7rem;
+}
+
 .formulario h2 {
   margin: 0 0 30px;
   padding: 0;
