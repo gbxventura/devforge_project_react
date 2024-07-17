@@ -1,53 +1,23 @@
 .slider_container {
   width: 100%;
-<<<<<<< HEAD
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
-
-=======
   max-width: 1200px; /* Limite máximo de largura */
   margin: 0 auto; /* Centraliza o contêiner */
   padding: 0 1rem; /* Adiciona um pouco de padding horizontal */
   box-sizing: border-box; /* Inclui padding e border na largura total */
->>>>>>> 387d70bcfe6595122dca36d792d19d8ebe9e17ef
 }
 
 .slider_container img {
   width: 100%;
-<<<<<<< HEAD
   height: auto;
   border-radius: 2rem;
   margin-block: 1rem;
 }
 
-
-
-=======
-  height: auto; /* Ajusta a altura automaticamente mantendo a proporção */
-}
-.slider_container h3 {
-  color: var(--white);
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
->>>>>>> 387d70bcfe6595122dca36d792d19d8ebe9e17ef
 .h1_roadmap {
   text-align: center;
   font-weight: bold;
   color: var(--white);
-<<<<<<< HEAD
-  margin-bottom: 1rem;
-}
-.slider_container h3 {
-  color: var(--white);
-  text-align: center;
-  margin-block: 1rem;
-=======
   margin-bottom: 1rem; /* Espaçamento inferior */
->>>>>>> 387d70bcfe6595122dca36d792d19d8ebe9e17ef
 }
 
 .h1_roadmap span {
@@ -55,8 +25,6 @@
 }
 
 @media (max-width: 1024px) {
-<<<<<<< HEAD
-=======
   .slider_container {
     max-width: 100%;
     width: 900px;
@@ -72,7 +40,6 @@
 }
 
 @media (max-width: 425px) {
->>>>>>> 387d70bcfe6595122dca36d792d19d8ebe9e17ef
   .slider_container {
     padding: 0;
     width: 900px;
@@ -101,9 +68,6 @@
     padding: 0;
     width: 250px;
     max-width: 100%;
-<<<<<<< HEAD
-=======
     width: 300px;
->>>>>>> 387d70bcfe6595122dca36d792d19d8ebe9e17ef
   }
 }
