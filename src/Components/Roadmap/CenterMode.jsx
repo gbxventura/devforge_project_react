@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> 387d70bcfe6595122dca36d792d19d8ebe9e17ef
 import Slider from 'react-slick';
 import card1 from '../../assets/imgs/roadmapImgs/1.png';
 import card2 from '../../assets/imgs/roadmapImgs/2.png';
@@ -40,6 +44,7 @@ function CenterMode() {
       </div>
       <Slider {...settings}>
         <div>
+<<<<<<< HEAD
           <img src={card1} alt='Card 1' />
         </div>
         <div>
@@ -50,6 +55,30 @@ function CenterMode() {
         </div>
         <div>
           <img src={card4} alt='Card 1' />
+=======
+          <h3>Título</h3>
+          <img src={card1} alt='Card 1' />
+        </div>
+        <div>
+          <h3>Título</h3>
+          <img src={card2} alt='Card 2' />
+        </div>
+        <div>
+          <h3>Título</h3>
+          <img src={card3} alt='Card 3' />
+        </div>
+        <div>
+          <h3>Título</h3>
+          <img src={card1} alt='Card 1' />
+        </div>
+        <div>
+          <h3>Título</h3>
+          <img src={card2} alt='Card 2' />
+        </div>
+        <div>
+          <h3>Título</h3>
+          <img src={card3} alt='Card 3' />
+>>>>>>> 387d70bcfe6595122dca36d792d19d8ebe9e17ef
         </div>
       </Slider>
     </div>
