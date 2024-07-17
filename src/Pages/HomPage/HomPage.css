@@ -1,4 +1,10 @@
-.divisoria{
-    margin: 10rem;
-    color: transparent;
+.divisoria {
+  margin: 10rem;
+  color: transparent;
+}
+
+@media (max-width: 1200px) {
+  .divisoria {
+    margin: 0;
   }
+}
