@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 import styles from './Servicos.module.css';
 import img1 from '../../assets/imgs/img-1.svg';
@@ -50,7 +50,7 @@ const Servicos = () => {
               <h1>Otimização</h1>
             </div>
             <div className={styles.descricao}>
-              <p>Iremos otimizar o site da sua empresa para os mecanusmos do Google.</p>
+              <p>Iremos otimizar o site da sua empresa para os mecanismos do Google.</p>
             </div>
           </div>
           <div className={styles.titulo3}>
@@ -94,7 +94,7 @@ const Servicos = () => {
               <h1>Treinamento de uso do site</h1>
             </div>
             <div className={styles.descricao}>
-              <p>Às vezes pode ser complexo gereciar o próprio site. Após finalizado a contrução de seu site. Vamos ajudá-lo a explorar e personalizar seu novo painel de administração.</p>
+              <p>Às vezes pode ser complexo gereciar o próprio site. Após finalizado a construção de seu site. Vamos ajudá-lo a explorar e personalizar seu novo painel de administração.</p>
             </div>
           </div>
         </div>
