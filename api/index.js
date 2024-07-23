@@ -4,19 +4,15 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 const app = express();
-const SECRET_KEY = process.env.SECRET_KEY;
+const SECRET_KEY = 'seu_segredo_super_secreto'; // chave secreta diretamente no código
 
-// Middleware
 app.use(bodyParser.json());
 app.use(cors());
 
-// Conectar ao MongoDB
-const mongoURI = process.env.MONGO_URI;
+const mongoURI =
+  'mongodb+srv://gbxventura:0901@cursojs01.e6vqfep.mongodb.net/forms?retryWrites=true&w=majority&appName=cursojs01'; // URI do MongoDB diretamente no código
 mongoose
   .connect(mongoURI, {
     serverSelectionTimeoutMS: 5000,
@@ -29,7 +25,6 @@ mongoose
     console.error('Erro ao conectar ao MongoDB', err);
   });
 
-// Definir o modelo de dados
 const FormSchema = new mongoose.Schema({
   name: String,
   company: String,
@@ -42,7 +37,6 @@ const FormSchema = new mongoose.Schema({
 
 const FormModel = mongoose.model('Form', FormSchema);
 
-// Definir o modelo de usuário
 const UserSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
@@ -50,7 +44,6 @@ const UserSchema = new mongoose.Schema({
 
 const UserModel = mongoose.model('User', UserSchema);
 
-// Rota para registro de usuário
 app.post('/api/register', async (req, res) => {
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -65,7 +58,6 @@ app.post('/api/register', async (req, res) => {
   }
 });
 
-// Rota para login de usuário
 app.post('/api/login', async (req, res) => {
   try {
     const user = await UserModel.findOne({ email: req.body.email });
@@ -90,7 +82,6 @@ app.post('/api/login', async (req, res) => {
   }
 });
 
-// Rota para receber os dados do formulário
 app.post('/api/form', async (req, res) => {
   try {
     const formData = new FormModel(req.body);
@@ -101,7 +92,6 @@ app.post('/api/form', async (req, res) => {
   }
 });
 
-// Buscar dados do formulario
 app.get('/api/forms', async (req, res) => {
   try {
     const forms = await FormModel.find();
@@ -111,7 +101,6 @@ app.get('/api/forms', async (req, res) => {
   }
 });
 
-// Rota para excluir um formulário
 app.delete('/api/forms/:id', async (req, res) => {
   try {
     const { id } = req.params;
@@ -123,5 +112,6 @@ app.delete('/api/forms/:id', async (req, res) => {
   }
 });
 
-// Exportar servidor
-export default app;
+app.listen(3000, () => {
+  console.log('Server executando na porta 3000');
+});
