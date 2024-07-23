@@ -1,0 +1,2 @@
+MONGO_URI=mongodb+srv://gbxventura:0901@cursojs01.e6vqfep.mongodb.net/forms?retryWrites=true&w=majority&appName=cursojs01
+SECRET_KEY=seu_segredo_super_secreto

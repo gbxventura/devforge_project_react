@@ -4,22 +4,21 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
-const port = 3000;
-const SECRET_KEY = 'seu_segredo_super_secreto';
+const SECRET_KEY = process.env.SECRET_KEY;
 
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
 
 // Conectar ao MongoDB
-const mongoURI =
-  'mongodb+srv://gbxventura:0901@cursojs01.e6vqfep.mongodb.net/forms?retryWrites=true&w=majority&appName=cursojs01';
+const mongoURI = process.env.MONGO_URI;
 mongoose
   .connect(mongoURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
     serverSelectionTimeoutMS: 5000,
     socketTimeoutMS: 45000,
   })
@@ -124,8 +123,5 @@ app.delete('/api/forms/:id', async (req, res) => {
   }
 });
 
-
-// Ouvindo porta
-app.listen(port, () => {
-  console.log(`Server executando na porta ${port}`);
-});
+// Exportar servidor
+export default app;
