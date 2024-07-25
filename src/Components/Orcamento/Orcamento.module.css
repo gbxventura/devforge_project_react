@@ -162,3 +162,9 @@
       text-align: center;
   }
 }
+
+@media (max-width: 320px){
+  .contact{
+    padding-right: 0;
+  }
+}

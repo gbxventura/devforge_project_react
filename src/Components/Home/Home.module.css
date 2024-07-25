@@ -103,6 +103,12 @@
   }
 }
 
+@media (min-width: 1265px) {
+  .home_content {
+    padding-left: 5rem;
+  }
+}
+
 /* Ajustes para telas menores que 768px */
 @media (max-width: 768px) {
   .home {
@@ -157,8 +163,11 @@
   }
 }
 
-@media (min-width: 1265px) {
-  .home_content {
-    padding-left: 5rem;
+
+
+
+@media (max-width: 320px) {
+  .home{
+    padding-right: 0;
   }
 }

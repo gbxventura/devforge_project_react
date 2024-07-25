@@ -164,3 +164,8 @@
   }
 }
 
+@media (max-width: 320px) {
+  .servicos{
+    padding-right: 0;
+  }
+}

@@ -133,6 +133,38 @@ ul li:hover a:after {
   }
 }
 
+@media (max-width: 1264px) {
+  .navlist {
+    display: block;
+    flex-direction: column;
+    background: rgba(0, 0, 10, 0.681);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+
+  .navlist.showMenu {
+    height: auto;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+  .navlist {
+    color: var(--white);
+  }
+  .btn_login {
+    color: var(--white);
+    font-size: 3em;
+    background-color: transparent;
+  }
+}
+
 @media (max-width: 425px) {
   .navlist {
     display: block;
@@ -165,34 +197,3 @@ ul li:hover a:after {
   }
 }
 
-@media (max-width: 1264px) {
-  .navlist {
-    display: block;
-    flex-direction: column;
-    background: rgba(0, 0, 10, 0.681);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease;
-  }
-
-  .navlist.showMenu {
-    height: auto;
-  }
-
-  .menuIcon {
-    display: block;
-  }
-  .navlist {
-    color: var(--white);
-  }
-  .btn_login {
-    color: var(--white);
-    font-size: 3em;
-    background-color: transparent;
-  }
-}
