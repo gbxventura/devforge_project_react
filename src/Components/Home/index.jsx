@@ -24,8 +24,8 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <div className={styles.home_content}>
-        <h4>Criação de Sites Profissionais</h4>
-        <h1>Transformando Ideias em Projetos Profissionais</h1>
+        <h4>Criação de sites profissionais</h4>
+        <h1>Transformando ideias em projetos profissionais</h1>
         <p>
           Somos uma agência especializada na criação de sites e plataformas
           digitais para empresas, focada em projetar, desenvolver e gerenciar

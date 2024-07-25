@@ -38,7 +38,7 @@ function Header() {
       <ul className={`${styles.navlist} ${isMenuOpen ? styles.showMenu : ''}`}>
         <li>
           <a href='#' className={styles.active}>
-            Inicio
+            Início
           </a>
         </li>
         <li>

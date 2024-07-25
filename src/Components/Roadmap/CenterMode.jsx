@@ -1,9 +1,7 @@
-import React from 'react';
 import Slider from 'react-slick';
 import card1 from '../../assets/imgs/roadmapImgs/1.png';
 import card2 from '../../assets/imgs/roadmapImgs/2.png';
 import card3 from '../../assets/imgs/roadmapImgs/3.png';
-import card4 from '../../assets/imgs/roadmapImgs/4.png';
 import styles from './Roadmap.module.css';
 
 function CenterMode() {
@@ -38,7 +36,7 @@ function CenterMode() {
       </div>
       <div className={styles.titulo_roadmap} id=''>
         <h1 className={styles.h1_roadmap}>
-          Road<span>Map</span>
+          Road<span>map</span>
         </h1>
       </div>
       <Slider {...settings}>

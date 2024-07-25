@@ -50,17 +50,17 @@ const Orcamento = () => {
     <section className={styles.contact} id='contact'>
       <div className={styles.contact_text}>
         <h2 className={styles.h2_orcamento}>
-          Entre em <span>Contato</span>
+          Entre em <span>contato</span>
         </h2>
-        <h4>Nossos Profissionais estão prontos para lhe atender</h4>
+        <h4>Nossos profissionais estão prontos para lhe atender</h4>
         <p>
-          Equipe especializada em Projetos Full Stack, Design e Marketing
+          Equipe especializada em projetos Full Stack, Design e Marketing
           Multimídia
         </p>
         <ul className={styles.list2}>
-          <li>+55 11 9999-9999</li>
-          <li> +55 11 9999-9999</li>
-          <li>contato@devforge.dev.br</li>
+          <li>+55 11 96819-5728</li>
+          <li> +55 11 91651-6413</li>
+          <li>devforge.contato@gmail.com</li>
         </ul>
         <div className={styles.contact_icons}>
           <a href='#'>

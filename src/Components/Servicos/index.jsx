@@ -36,7 +36,7 @@ const Servicos = () => {
               <img src={img1} alt='Foto1' />
             </div>
             <div className={styles.titulo}>
-              <h1>Criação de Sites</h1>
+              <h1>Criação de sites</h1>
             </div>
             <div className={styles.descricao}>
               <p>Fazemos a criação de sites profissionais para a sua empresa.</p>
@@ -58,7 +58,7 @@ const Servicos = () => {
               <img src={img3} alt='Foto3' />
             </div>
             <div className={styles.titulo}>
-              <h1>Marketing Digital</h1>
+              <h1>Marketing digital</h1>
             </div>
             <div className={styles.descricao}>
               <p>Trabalhamos com campanhas para o Google, Facebook e Instagram.</p>
@@ -69,7 +69,7 @@ const Servicos = () => {
               <img src={img4} alt='Foto4' />
             </div>
             <div className={styles.titulo}>
-              <h1>Identidade Visial</h1>
+              <h1>Identidade visual</h1>
             </div>
             <div className={styles.descricao}>
               <p>Nossa equipe irá criar a identidade visual para a sua empresa.</p>
@@ -80,7 +80,7 @@ const Servicos = () => {
               <img src={img5} alt='Foto5' />
             </div>
             <div className={styles.titulo}>
-              <h1>Sistemas Web & Integração de Softwares de Terceiros</h1>
+              <h1>Sistemas web & integração de softwares de terceiros</h1>
             </div>
             <div className={styles.descricao}>
               <p>Desenvolvimento de projetos sob medida. Integrações entre sistemas. Infraestruturas de servidor e suporte especializado.</p>

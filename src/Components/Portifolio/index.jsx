@@ -31,7 +31,7 @@ const Portfolio = () => {
     {
       img: portfolio3,
       title: 'Coder',
-      description: 'Projeto para teste de codigos',
+      description: 'Projeto para teste de códigos',
     },
     {
       img: portfolio4,
@@ -47,7 +47,7 @@ const Portfolio = () => {
       <div className={styles.mainText}>
         <p>Portfólio</p>
         <h2>
-          Ultimos <span>Projetos</span>
+          Últimos <span>projetos</span>
         </h2>
       </div>
       <div className={styles.portfolioContent}>

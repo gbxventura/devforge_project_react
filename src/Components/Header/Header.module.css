@@ -127,9 +127,21 @@ ul li:hover a:after {
 
 
 /* Responsividade */
+
 @media(max-width: 1440px){
   .navlist a{
     font-size: 1.0225em;
+  }
+}
+
+@media (max-width: 1327px) and (max-height: 993px){
+  .navlist a {
+    font-size: 1.01em;
+  }
+}
+@media (min-width: 1264px){
+  .navlist a {
+    font-size: .95em;
   }
 }
 
