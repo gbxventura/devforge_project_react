@@ -209,3 +209,21 @@ ul li:hover a:after {
   }
 }
 
+@media (max-width: 250px) {
+  .devLogo p{
+    font-size: 1.1rem;
+  
+  }
+
+  .logoImg{
+    width: 40px;
+  }
+
+  .header.sticky{
+    justify-content: space-around;
+    padding-left: 0;
+    width: 250px;
+    padding-inline: 0;
+  }
+
+}

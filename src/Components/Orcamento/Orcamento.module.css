@@ -169,3 +169,32 @@
     padding-right: 0;
   }
 }
+
+
+@media (max-width: 250px) {
+  .contact{
+    /* padding-left: 3rem; */
+    width: 95%;
+  }
+
+  .contact h2{
+    font-size: 1rem;
+  }
+
+  .contact_text h4, .contact_text p {
+    font-size: .8rem;
+    width: 95%;
+  }
+  
+  .list2 li {
+    font-size: .9rem;
+  }
+
+  .contact_form input,
+  .contact_form textarea,
+  .contact_form select
+   {
+    width: 14rem;
+    font-size: .5rem;
+  }
+}

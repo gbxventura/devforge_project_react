@@ -92,3 +92,11 @@
 .whatsLink:hover #icon {
     transform: scale(1.5);
 }
+
+
+@media (max-width: 250px){
+    .footer p{
+        font-size: 1rem;
+    }
+
+}

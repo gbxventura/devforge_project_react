@@ -152,3 +152,17 @@
     padding-right: 0;
   }
 }
+@media (max-width: 250px) {
+  .portfolio{
+    padding-inline: 0;
+  }
+
+  .portfolio h2 {
+    font-size: 1.5rem;
+  }
+
+  .portfolioContent{
+    grid-template-columns: .7fr;
+    justify-content: center;
+  }
+}
