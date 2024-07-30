@@ -185,13 +185,14 @@
   }
   
   .servicos, .container_servicos {
-    justify-content: flex-start;
-    align-items: flex-start;
+    /* justify-content: flex-start; */
+    /* align-items: flex-start; */
     padding: 0;
     margin: 0; 
     width: 250px;
   }
-  
+
+
   .foto,
   .titulo,
   .descricao {

@@ -170,9 +170,12 @@
 }
 
 @media (max-width: 250px) {
+  .home{
+    padding-inline: 0;
+  }
+  
   .home_content{
-    padding-right: 0;
-    padding-left: 1rem;
+    padding-inline: 0;
     width: 95%;
   }
   
@@ -185,16 +188,16 @@
   }
 
   .home_content h1{
-    font-size: .8rem;
+    font-size: 1rem;
     width: 95%;  
   }
 
   .home_content h4{
-    font-size: .8rem;
+    font-size: .9rem;
     
   }
   .home_content p{
-    width: 90%;
-    font-size: .6rem;
+    /* width: 90%; */
+    font-size: .9rem;
   }
 }
