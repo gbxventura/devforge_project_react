@@ -22,6 +22,11 @@
   --white: #ededed;
   --text-color: #fff;
 }
+
+html{
+  width: 95%;
+}
+
 body {
   background-color: #000002;
   display: flex;
